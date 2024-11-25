@@ -1,5 +1,5 @@
 {
-  "name": "react-native-thermal-printer",
+  "name": "react-native-thermal-printer-lng-support",
   "version": "2.3.6",
   "description": "native bridge for thermal printer",
   "main": "lib/commonjs/index",

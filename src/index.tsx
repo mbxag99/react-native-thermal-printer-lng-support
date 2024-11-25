@@ -31,7 +31,7 @@ type NativeModuleType = typeof NativeModules & {
       printerWidthMM: number,
       printerNbrCharactersPerLine: number,
       encoding: string,
-  charsetId: number,
+      charsetId: number,
     ): Promise<void>;
     getBluetoothDeviceList(): Promise<BluetoothPrinter[]>;
   };
@@ -60,6 +60,8 @@ interface PrintTcpInterface extends PrinterInterface {
 
 interface PrintBluetoothInterface extends PrinterInterface {
   macAddress: string;
+  encoding: string;
+  charsetId: number;
 }
 
 let defaultConfig: PrintTcpInterface & PrintBluetoothInterface = {
@@ -130,6 +132,8 @@ const printBluetooth = (
     printerDpi,
     printerWidthMM,
     printerNbrCharactersPerLine,
+    encoding,
+    charsetId,
   } = getConfig(args);
 
   return ThermalPrinterModule.printBluetooth(
@@ -140,7 +144,9 @@ const printBluetooth = (
     mmFeedPaper,
     printerDpi,
     printerWidthMM,
-    printerNbrCharactersPerLine
+    printerNbrCharactersPerLine,
+    encoding,
+    charsetId,
   );
 };
 
