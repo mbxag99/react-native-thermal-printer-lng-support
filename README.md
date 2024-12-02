@@ -1,6 +1,9 @@
-# react-native-thermal-printer
+# react-native-thermal-printer with language support
 
-native bridge for thermal printer
+https://github.com/AllInOneYT/react-native-thermal-printer 
+
+A fork to add support to printing with langauges other than English like Arabic, Hebrew, ... .
+
 
 ### :warning: v2 breaking change
 
@@ -189,6 +192,9 @@ let defaultConfig: PrintTcpInterface = {
 | printerWidthMM              | `number`  | `80`              | printing width in millimeters                                                |
 | printerNbrCharactersPerLine | `number`  | `42`              | The maximum number of medium sized characters that can be printed on a line. |
 | timeout                     | `number`  | `30000`           | the maximum time to wait before the print is canceled.                       |
+| encoding                     | `string`  | `UTF-8`          | the language encoding                                                        |
+| charsetId                     | `number`  | `0`             | the language char set id                                                     |
+
 
 ## Payload
 
