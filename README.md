@@ -137,27 +137,6 @@ Support both network and bluetooth printing for now
 | printTcp       | `config` | `Partial<PrintTcpInterface> & Pick<PrinterInterface, 'payload'>`       | `defaultConfig` |
 | printBluetooth | `config` | `Partial<PrintBluetoothInterface> & Pick<PrinterInterface, 'payload'>` | `defaultConfig` |
 
-## Interfaces
-
-```ts
-interface PrinterInterface {
-  payload: string;
-  autoCut: boolean;
-  openCashbox: boolean;
-  mmFeedPaper: number;
-  printerDpi: number;
-  printerWidthMM: number;
-  printerNbrCharactersPerLine: number;
-}
-
-interface PrintTcpInterface extends PrinterInterface {
-  ip: string;
-  port: number;
-  timeout: number;
-}
-
-interface PrintBluetoothInterface extends PrinterInterface {}
-```
 
 ## Config
 
